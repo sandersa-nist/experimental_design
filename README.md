@@ -38,5 +38,19 @@ design = {"temperature":{"-":"cold","+":"hot"},"humidity":{"-":"dry","+":"humid"
 ```python
 default = {"temperature":{0:"cold},"humidity:{0,"dry"}}  
 ```
-3.  if you
+3.  if you want a default use 
+```python
+table = experimental_design.fully_factorial_default(design_dictionary=design, default_state = default, default_modulo=2,
+                            randomized=True, run_values="values",random_seed =42)
+```
+and if you do not use:
+```python 
+table = experimental_design.fully_factorial(design_dictionary=design,
+                            randomized=True, run_values="values",random_seed =42)
+```
+4. format and have fun! the resulting tables are lists of dictionaries, so if you want to use them as a [pandas](https://pandas.pydata.org/) dataframe it is just
+```python
+df = pd.DataFrame(table)
+```
 # [Jupyter Example](./examples/experimental_designs_example.ipynb)
+# [API Documentation](./documentation/) 
