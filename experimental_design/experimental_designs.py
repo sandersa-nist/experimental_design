@@ -222,11 +222,7 @@ def fully_factorial_split_plot_interleaved(whole_plot_design_dictionary, split_p
         else:
             interleaved_test_conditions.append(test_condition)
     return interleaved_test_conditions
-#-----------------------------------------------------------------------------
-# Module Classes
-class ExperimentalDesign():
-    """Superclass for holding experimental designs"""
-    pass
+
 #-----------------------------------------------------------------------------
 # Module Scripts
 def test_fully_factorial():
@@ -380,7 +376,7 @@ def test_fully_factorial_split_plot_interleave():
 # Module Runner
 if __name__ == '__main__':
     test_fully_factorial()
-    # test_fully_factorial_default()
-    # test_fully_factorial_split_plot()
-    # test_fully_factorial_split_plot_interleave()
+    test_fully_factorial_default()
+    test_fully_factorial_split_plot()
+    test_fully_factorial_split_plot_interleave()
  
