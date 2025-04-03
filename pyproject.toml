@@ -24,7 +24,7 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = ["pandas"]
+dependencies = ["pandas","pyyaml"]
 
 [project.urls]
 Documentation = "https://github.com/sandersa-nist/experimental_design#readme"

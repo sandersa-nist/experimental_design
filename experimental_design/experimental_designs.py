@@ -16,7 +16,8 @@ import sys
 import os
 import random
 import itertools
-
+import yaml
+import pandas as pd
 
 #-----------------------------------------------------------------------------
 # Module Constants
@@ -230,8 +231,6 @@ class ExperimentalDesign():
 # Module Scripts
 def test_fully_factorial():
     """Tests the fully_factorial design"""
-    import yaml
-    import pandas as pd
     test_design = {'one': {0: 'LOW', 1: 'HIGH', 2: 'zest'}, 'two': {0: 'FAST', 1: 'SLOW'}, 'three': {0: 'ON'}}
     print("*"*80)
     print("Testing the fully_factorial function")
@@ -251,8 +250,6 @@ def test_fully_factorial():
 
 def test_fully_factorial_default():
     """Tests the fully_factorial_default design"""
-    import yaml
-    import pandas as pd
     test_design = {'one': {0: 'LOW', 1: 'HIGH', 2: 'zest'}, 'two': {0: 'FAST', 1: 'SLOW'}, 'three': {0: 'ON'}}
     default = {'one': {-1: 'default'}, 'two': {-1: 'MEDIUM'}, 'three': {-1: 'OFF'}}
     print("*"*80)
@@ -274,8 +271,6 @@ def test_fully_factorial_default():
 
 def test_fully_factorial_split_plot():
     """Tests the fully_factorial_split_plot_default design"""
-    import yaml
-    import pandas as pd
     test_design = {'one': {0: 'LOW', 1: 'HIGH', 2: 'zest'}, 'two': {0: 'FAST', 1: 'SLOW'}, 'three': {0: 'ON'}}
     wp = {'whole_plot_1': {-1: "in my shoe", 0: 'In my Head'}, 'whole_plot_2': {0: 'WP OFF', 1: "WP ON"}}
     print("*"*80)
@@ -306,8 +301,7 @@ def test_fully_factorial_split_plot():
 
 def test_fully_factorial_split_plot_default():
     """Tests the fully_factorial_split_plot_default design"""
-    import yaml
-    import pandas as pd
+
     test_design = {'one': {0: 'LOW', 1: 'HIGH', 2: 'zest'}, 'two': {0: 'FAST', 1: 'SLOW'}, 'three': {0: 'ON'}}
     wp = {'whole_plot_1': {-1: "in my shoe", 0: 'In my Head'}, 'whole_plot_2': {0: 'WP OFF', 1: "WP ON"}}
     wp_default = {'whole_plot_1': {3: "default"}, 'whole_plot_2': {0: 'wp_2 default'}}
@@ -343,8 +337,6 @@ def test_fully_factorial_split_plot_default():
 
 def test_fully_factorial_split_plot_interleave():
     """Tests the fully_factorial_split_plot_default design"""
-    import yaml
-    import pandas as pd
     sp = {'one': {0: 'LOW', 1: 'HIGH', 2: 'zest'}, 'two': {0: 'FAST', 1: 'SLOW'}, 'three': {0: 'ON'}}
     wp = {'whole_plot_1': {-1: "in my shoe", 0: 'In my Head'}, 'whole_plot_2': {0: 'WP OFF', 1: "WP ON"}}
     wp_2 = {'whole_plot_1': {3: "default"}, 'whole_plot_2': {0: 'wp_2 default'}}
@@ -387,5 +379,8 @@ def test_fully_factorial_split_plot_interleave():
 #-----------------------------------------------------------------------------
 # Module Runner
 if __name__ == '__main__':
-    test_fully_factorial_split_plot_interleave()
+    test_fully_factorial()
+    # test_fully_factorial_default()
+    # test_fully_factorial_split_plot()
+    # test_fully_factorial_split_plot_interleave()
  
