@@ -31,7 +31,7 @@ dd_df
 ```
 # Workflow
 1. create a dictionary that has the factor names as keys and a dictionary of settings with names or level indicators as keys and specific test points as values 
-``python
+```python
 design = {"temperature":{"-":"cold","+":"hot"},"humidity":{"-":"dry","+":"humid"}}
 ```
 2. Decide if you want or need a default (control test) and how frequently it would be tested
