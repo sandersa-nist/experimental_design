@@ -16,9 +16,7 @@ import sys
 import os
 import random
 import itertools
-#-----------------------------------------------------------------------------
-# Third Party Imports
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+
 
 #-----------------------------------------------------------------------------
 # Module Constants
@@ -250,6 +248,7 @@ def test_fully_factorial():
     print("The test_conditions or design randomized is:")
     print(random_test_condtions)
     print("*" * 80)
+
 def test_fully_factorial_default():
     """Tests the fully_factorial_default design"""
     import yaml
@@ -272,6 +271,7 @@ def test_fully_factorial_default():
     print("The test_conditions or design randomized is:")
     print(random_test_condtions)
     print("*" * 80)
+
 def test_fully_factorial_split_plot():
     """Tests the fully_factorial_split_plot_default design"""
     import yaml
@@ -383,7 +383,6 @@ def test_fully_factorial_split_plot_interleave():
     print("The test_conditions or design randomized is:")
     print(random_test_condtions)
     print("*" * 80)
-
 
 #-----------------------------------------------------------------------------
 # Module Runner

@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "experimental-design"
+name = "experimental_design"
 dynamic = ["version"]
 description = 'Tools to create and manage design of experiments (DOE) or statistical design of experiments.'
 readme = "README.md"
@@ -24,12 +24,12 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = ["pandas"]
 
 [project.urls]
-Documentation = "https://github.com/sandersa/experimental-design#readme"
-Issues = "https://github.com/sandersa/experimental-design/issues"
-Source = "https://github.com/sandersa/experimental-design"
+Documentation = "https://github.com/sandersa-nist/experimental_design#readme"
+Issues = "https://github.com/sandersa-nist/experimental_design/issues"
+Source = "https://github.com/sandersa-nist/experimental_design"
 
 [tool.hatch.version]
 path = "experimental_design/__init__.py"
