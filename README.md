@@ -65,3 +65,4 @@ df = pd.DataFrame(table)
 
 # [Jupyter Example](./examples/experimental_designs_example.ipynb)
 # [API Documentation](./documentation/) 
+![image](./documentation/3factors_default.png)
