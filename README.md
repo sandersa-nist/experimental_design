@@ -45,23 +45,31 @@ design = {"temperature":{"-":"cold","+":"hot"},"humidity":{"-":"dry","+":"humid"
 ```
 2. Decide if you want or need a default (control test) and how frequently it would be tested
 ```python
-default = {"temperature":{0:"cold},"humidity:{0:"dry"}}  
+default = {"temperature":{0:"cold"},"humidity":{0:"dry"}}  
 ```
 3.  if you want a default use: 
 
 ```python
-table = experimental_design.fully_factorial_default(design_dictionary=design, default_state = default, default_modulo=2,randomized=True, run_values="values",random_seed =42)
+table = experimental_design.fully_factorial_default(design_dictionary=design, 
+                                                    default_state = default, 
+                                                    default_modulo=2,
+                                                    randomized=True,
+                                                    run_values="values",
+                                                    random_seed =42)
 ```
 and if you do not use:
 
 ```python 
 table = experimental_design.fully_factorial(design_dictionary=design,
-                            randomized=True, run_values="values",random_seed =42)
+                                            randomized=True, 
+                                            run_values="values",
+                                            random_seed =42)
 ```
 4. format and have fun! the resulting tables are lists of dictionaries, so if you want to use them as a [pandas](https://pandas.pydata.org/) dataframe it is just
 ```python
-df = pd.DataFrame(table)
+
 ```
+![image](./documentation/Readme_Example_table.png)
 
 Currently, this repository has functionality for fully_factorial, fully_factorial_default, fully_factorial_split_plot, fully_factorial_split_plot_default and fully_factorial_split_plot_interleaved.
 
