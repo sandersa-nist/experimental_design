@@ -67,7 +67,7 @@ table = experimental_design.fully_factorial(design_dictionary=design,
 ```
 4. format and have fun! the resulting tables are lists of dictionaries, so if you want to use them as a [pandas](https://pandas.pydata.org/) dataframe it is just
 ```python
-
+df = pd.DataFrame(table)
 ```
 ![image](./documentation/Readme_Example_Table.png)
 
