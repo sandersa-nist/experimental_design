@@ -30,7 +30,7 @@ With this package making a design of 6,000 factors with a high and low state tha
 ```python
 import experimental_design 
 import pandas as pd
-n_factors = 3
+n_factors = 6000
 design = {f"F{i}":{"-":-1,"+":1} for i in range(1,n_factors+1)}
 default = {f"F{i}":{0:"Default"} for i in range(1,n_factors+1)}
 default_design = experimental_design.fully_factorial_default(design_dictionary=design,default_state=default,
@@ -45,7 +45,7 @@ design = {"temperature":{"-":"cold","+":"hot"},"humidity":{"-":"dry","+":"humid"
 ```
 2. Decide if you want or need a default (control test) and how frequently it would be tested
 ```python
-default = {"temperature":{0:"cold},"humidity:{0,"dry"}}  
+default = {"temperature":{0:"cold},"humidity:{0:"dry"}}  
 ```
 3.  if you want a default use: 
 
@@ -63,6 +63,17 @@ table = experimental_design.fully_factorial(design_dictionary=design,
 df = pd.DataFrame(table)
 ```
 
-# [Jupyter Example](./examples/experimental_designs_example.ipynb)
-# [API Documentation](./documentation/) 
+Currently, this repository has functionality for fully_factorial, fully_factorial_default, fully_factorial_split_plot, fully_factorial_split_plot_default and fully_factorial_split_plot_interleaved.
+
+# Code Structure
+This repository relies on [simulations.py](./experimental_design/experimental_designs.py) for its functionality, for API style documentation see [documentation](https://sandersa-nist.github.io/experimental_design/documentation/experimental_design/experimental_designs.html).
+
+# [Example](./examples/experimental_designs_example.ipynb)
+# [API Documentation](https://sandersa-nist.github.io/experimental_design/documentation/experimental_design.html) 
+# Contact
+Aric Sanders [aric.sanders@nist.gov](mailto:aric.sanders@nist.gov)
+
 ![image](./documentation/3factors_default.png)
+
+# NIST Disclaimer
+Certain commercial equipment, instruments, or materials (or suppliers, or software, ...) are identified in this repository to foster understanding. Such identification does not imply recommendation or endorsement by the National Institute of Standards and Technology, nor does it imply that the materials or equipment identified are necessarily the best available for the purpose.
