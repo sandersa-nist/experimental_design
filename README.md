@@ -69,7 +69,7 @@ table = experimental_design.fully_factorial(design_dictionary=design,
 ```python
 
 ```
-![image](./documentation/Readme_Example_table.png)
+![image](./documentation/Readme_Example_Table.png)
 
 Currently, this repository has functionality for fully_factorial, fully_factorial_default, fully_factorial_split_plot, fully_factorial_split_plot_default and fully_factorial_split_plot_interleaved.
 
