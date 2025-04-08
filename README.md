@@ -81,7 +81,6 @@ This repository relies on [simulations.py](./experimental_design/experimental_de
 # Contact
 Aric Sanders [aric.sanders@nist.gov](mailto:aric.sanders@nist.gov)
 
-![image](./documentation/3factors_default.png)
 
 # NIST Disclaimer
 Certain commercial equipment, instruments, or materials (or suppliers, or software, ...) are identified in this repository to foster understanding. Such identification does not imply recommendation or endorsement by the National Institute of Standards and Technology, nor does it imply that the materials or equipment identified are necessarily the best available for the purpose.
