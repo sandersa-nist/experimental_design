@@ -76,8 +76,12 @@ Currently, this repository has functionality for fully_factorial, fully_factoria
 # Code Structure
 This repository relies on [simulations.py](./experimental_design/experimental_designs.py) for its functionality, for API style documentation see [documentation](https://sandersa-nist.github.io/experimental_design/documentation/experimental_design/experimental_designs.html).
 
-# [Example](./examples/experimental_designs_example.ipynb)
-# [API Documentation](https://sandersa-nist.github.io/experimental_design/documentation/experimental_design.html) 
+# Example
+An [example](./examples/experimental_designs_example.ipynb) of fully factorial designs with different factors and levels, with and without defaults. Additionally, the example demonstrates multiple whole plot / split plot designs with exclusions.  
+
+# API Documentation
+[API Documentation](https://sandersa-nist.github.io/experimental_design/documentation/experimental_design.html) that lands at `__init__.py` and links to the primary submodule `experimental_designs.py`.  
+
 # Contact
 Aric Sanders [aric.sanders@nist.gov](mailto:aric.sanders@nist.gov)
 
